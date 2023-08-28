@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 aside {
   width: 30%;
   height: 100vh;
@@ -17,8 +22,16 @@ aside {
 }
 section {
   width: 70%;
-  height: 100vh;
+
   .button-move {
     background-color: black;
+  }
+  #logo {
+    width: 30px;
+    height: 30px;
+  }
+  .img-size {
+    width: 60px;
+    height: 60px;
   }
 }

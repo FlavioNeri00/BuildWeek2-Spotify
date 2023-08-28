@@ -1,1 +1,1 @@
-aside{width:30%;height:100vh}aside a:hover{opacity:1}aside #library #card-aside img{width:50px;height:50px}section{width:70%;height:100vh}section .button-move{background-color:#000}/*# sourceMappingURL=style.min.css.map */
+*,*::before,*::after{box-sizing:border-box}aside{width:30%;height:100vh}aside a:hover{opacity:1}aside #library #card-aside img{width:50px;height:50px}section{width:70%}section .button-move{background-color:#000}section #logo{width:30px;height:30px}section .img-size{width:60px;height:60px}/*# sourceMappingURL=style.min.css.map */
