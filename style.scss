@@ -1,0 +1,24 @@
+aside {
+  width: 30%;
+  height: 100vh;
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  #library {
+    #card-aside {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+section {
+  width: 70%;
+  height: 100vh;
+  .button-move {
+    background-color: black;
+  }
+}
