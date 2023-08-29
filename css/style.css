@@ -71,11 +71,47 @@ section .img-size {
   left: 0;
 }
 
-@media (max-width: 768px) {
-  #mix:last-child {
-    display: none;
-  }
-}
 #following-button {
   font-size: 0.5rem;
 }
+
+.img-library {
+  width: 105px;
+  height: 105px;
+}
+
+.titleAlbum {
+  font-size: 5rem;
+}
+
+.img-artist {
+  width: 25px;
+}
+
+.info {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  #mix .col:last-child,
+  #mix .col:nth-last-of-type(2) {
+    display: none;
+  }
+  .album-img {
+    width: 200px;
+  }
+  .titleAlbum {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  #mix:last-child {
+    display: none;
+  }
+  .album-img {
+    width: 150px;
+  }
+  .titleAlbum {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
