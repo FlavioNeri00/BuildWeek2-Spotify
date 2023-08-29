@@ -42,7 +42,7 @@ window.onload = async () => {
     hpAlbums.innerHTML += ` <div class="col">
     <div class=" d-flex align-items-center bg-secondary">
     <img class="img-size me-2" src="${album.cover_small}" alt="">
-    <p class="text-white fw-bold m-0 fs-6">${album.title}</p>
+    <p class="text-white fw-bold m-0 fs-6 truncate">${album.title}</p>
 
   </div>
   </div>`;
