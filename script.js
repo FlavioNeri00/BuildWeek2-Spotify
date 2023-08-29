@@ -24,7 +24,7 @@ window.onload = async () => {
   spot.innerHTML = `<img  class="me-4" src="${albumSpot.cover_medium}" alt="">
   <div class="flex-grow-1 ">
     <div class="d-flex justify-content-between align-items-center">
-<p class="m-0">${albumSpot.type}</p>
+<p class="m-0 text-capitalize">${albumSpot.type}</p>
 <button id="btn-Spot" type="button" class="btn btn-secondary">Nascondi Annuncio</button>
     </div>
     <h2>${albumSpot.title}</h2>
@@ -70,11 +70,11 @@ const fill = (arr, nodo) => {
     const album = await resp.json();
     nodo.innerHTML += `
     <div class="col ">
-    <div class="card bg-black p-2" style="min-height:342px">
+    <div class="card bg-black p-2" style="min-height:300px">
     <img src="${album.cover_medium}" class="card-img-top" alt="...">
     <div class="card-body d-flex flex-column">
-    <p class="text-white fw-bold m-0 fs-6">${album.title}</p>
-      <a href="" class="mt-auto "class="text-decoration-none"> ${album.artist.name}</a>
+    <p class="text-white fw-bold m-0 fs-6 truncate">${album.title}</p>
+      <a href="" class="mb-auto mt-1 text-decoration-none text-secondary"> ${album.artist.name}</a>
     </div>
   </div>
   </div>`;

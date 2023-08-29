@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
 aside {
   width: 30%;
   height: 100vh;
@@ -12,16 +15,26 @@ aside {
     }
   }
   #library {
-    #card-aside {
-      img {
-        width: 50px;
-        height: 50px;
+    #scroll-library {
+      &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+      height: 64vh;
+      overflow: auto;
+      .card-aside {
+        img {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }
 }
 section {
   width: 70%;
+  height: 88vh;
+  overflow: auto;
 
   .button-move {
     background-color: black;
@@ -34,4 +47,21 @@ section {
     width: 60px;
     height: 60px;
   }
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#player {
+  height: 70px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
