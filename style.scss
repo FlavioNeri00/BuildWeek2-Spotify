@@ -122,10 +122,24 @@ section {
   height: 50%;
   object-fit: cover;
   background-repeat: no-repeat;
-  object-position: center;
+  background-position: 50% 10%;
   background-size: cover;
 }
 
+.btnPlay {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 10px;
+}
+
+.cursor {
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   #mix .col:last-child,
   #mix .col:nth-last-of-type(2) {

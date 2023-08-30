@@ -1,7 +1,7 @@
 const albumsArr = [75621062, 315282, 14879699, 262078, 110565, 11205658];
-const UrlAlbum = "https://deezerdevs-deezer.p.rapidapi.com/album/";
+const UrlAlbum = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotArr = [479652325, 463340305, 164132222];
-const mixArr = [209502332, 12134586, 1262266, 940071, 116975];
+const mixArr = [1262266, 940071, 116975, 708674, 144718432];
 const forYouArr = [2795561, 173465852, 239959, 339096, 6958728];
 const recentsArr = [208761542, 323847, 1440805, 480749945, 10339618];
 const options = {

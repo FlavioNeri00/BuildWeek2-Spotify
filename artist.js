@@ -21,9 +21,9 @@ window.onload = async () => {
   bkImg.style.backgroundImage = `url(` + artist.picture_xl + `)`;
   artistHeader.innerHTML += ` <div class="mt-5  " >
   <div class="d-flex">
-<i class="bi bi-patch-check-fill"></i> <p class="ms-2 ">Artista Verificato</p>
+<i class="bi bi-patch-check-fill text-primary "></i> <p class="ms-2 info">Artista Verificato</p>
 </div>
-<h2>${artist.name}</h2>
+<h1 class="titleAlbum ">${artist.name}</h1>
 <p class="mt-4 info">${artist.nb_fan} ascoltatori mensili
 </p></div>`;
 
@@ -31,11 +31,16 @@ window.onload = async () => {
 
   const resp2 = await fetch(URL + idArtist + query, options);
   const topTracks = await resp2.json();
-
   const trackArr = topTracks.data;
+  const audio = new Audio();
+
   trackArr.forEach((track, index) => {
     const minTrack = (track.duration / 60).toFixed(2).split(".").join(":");
-    containerTop.innerHTML += ` <div class="col-6 d-flex"><span class="ms-3">${index + 1}</span>
+    const trackDiv = document.createElement("div");
+    trackDiv.classList.add("col-6", "d-flex", "cursor");
+
+    trackDiv.innerHTML = `
+    <button id="play-${index}" class="btnPlay"> ${index + 1}</button>
     <img
       class="ms-3"
       src="${track.album.cover_small}"
@@ -43,12 +48,34 @@ window.onload = async () => {
       style="width: 40px; height: 40px"
     />
     <p class="ms-3 flex-grow-1 truncate">${track.title}</p>
-    </div>
-    <div class="col-4">
-    <p class="flex-grow-1 text-secondary">${track.rank}</p>
-    </div>
-    <div class="col-2">
-    <p class="flex-grow-1 text-secondary">${minTrack}</p>
-    </div>`;
+  `;
+
+    const col4 = document.createElement("div");
+    col4.classList.add("col-4");
+    col4.innerHTML = `<p class="flex-grow-1 text-secondary">${track.rank}</p>`;
+
+    const col2 = document.createElement("div");
+    col2.classList.add("col-2");
+    col2.innerHTML = `<p class="flex-grow-1 text-secondary">${minTrack}</p>`;
+
+    containerTop.appendChild(trackDiv);
+    containerTop.appendChild(col4);
+    containerTop.appendChild(col2);
+
+    const mp3 = document.getElementById(`play-${index}`);
+    trackDiv.addEventListener("click", () => {
+      audio.src = track.preview;
+      audio.play();
+    });
   });
+
+  const likeIt = document.getElementById("love");
+  const nblike = Math.floor(Math.random() * artist.nb_album);
+  likeIt.innerHTML = ` <img
+  class="me-3"
+  src="${artist.picture_small}"
+  alt=""
+  style="width: 50px; height: 50px; border-radius: 50%"
+/>
+<p>Hai messo mi piace a ${nblike} brani</p>`;
 };

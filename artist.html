@@ -198,7 +198,8 @@
         </div>
         <div class="container-fluid container-md">
           <div class="d-flex align-items-center">
-            <i class="bi bi-play-circle me-3 fs-3 text-success"></i>
+            <i class="bi bi-play-circle-fill m-3 fs-1 text-success"></i>
+
             <button id="following-button" type="button" class="btn btn-outline-light me-3">SEGUI</button>
             <i class="bi bi-three-dots"></i>
           </div>
@@ -212,15 +213,7 @@
             <div class="col-12 col-md-4">
               <h5>Brani che ti piacciono</h5>
 
-              <div class="d-flex mt-4">
-                <img
-                  class="me-3"
-                  src="./assets/BW2-Spotify-assets/assets/imgs/main/image-11.jpg"
-                  alt=""
-                  style="width: 50px; height: 50px; border-radius: 50%"
-                />
-                <p>Hai messo mi piace a 20 brani</p>
-              </div>
+              <div id="love" class="d-flex mt-4"></div>
             </div>
           </div>
         </div>
@@ -234,7 +227,7 @@
           alt=""
         />
         <div>
-          <p class="text-white m-0">Brani che ti piaccione</p>
+          <p class="text-white m-0">Brani che ti piacciono</p>
           <span class="text-secondary">Playlist • 24509</span>
         </div>
         <i class="bi bi-heart ms-2 text-white"></i>
@@ -279,5 +272,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="artist.js"></script>
+    <script src="global-function.js"></script>
   </body>
 </html>

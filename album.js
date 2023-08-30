@@ -1,5 +1,5 @@
 const idAlbum = new URLSearchParams(window.location.search).get("ID");
-const URL = "https://deezerdevs-deezer.p.rapidapi.com/album/";
+const URL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const options = {
   method: "GET",
   headers: {
