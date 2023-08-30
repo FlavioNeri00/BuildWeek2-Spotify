@@ -115,6 +115,16 @@ section .img-size {
   border-radius: 5%;
 }
 
+#bkImg {
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  -o-object-position: center;
+     object-position: center;
+  background-size: cover;
+}
+
 @media (max-width: 768px) {
   #mix .col:last-child,
   #mix .col:nth-last-of-type(2) {
@@ -136,7 +146,19 @@ section .img-size {
   }
 }
 @media (max-width: 576px) {
-  #mix:last-child {
+  #mix .col:last-child,
+  #mix .col:nth-last-of-type(2),
+  #mix .col:nth-last-of-type(3) {
+    display: none;
+  }
+  #forYou .col:last-child,
+  #forYou .col:nth-last-of-type(2),
+  #forYou .col:nth-last-of-type(3) {
+    display: none;
+  }
+  #recents .col:last-child,
+  #recents .col:nth-last-of-type(2),
+  #recents .col:nth-last-of-type(3) {
     display: none;
   }
   .album-img {

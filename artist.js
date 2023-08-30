@@ -17,11 +17,14 @@ window.onload = async () => {
   console.log("id", idArtist);
 
   const artistHeader = document.getElementById("artistHeader");
-  artistHeader.style.backgroundImage = "url(`${artist.picture_xl}`)";
-  artistHeader.innerHTML += ` <div >
-<i class="bi bi-patch-check-fill"></i> <p>Artista Verificato</p>
+  const bkImg = document.getElementById("bkImg");
+  bkImg.style.backgroundImage = `url(` + artist.picture_xl + `)`;
+  artistHeader.innerHTML += ` <div class="mt-5  " >
+  <div class="d-flex">
+<i class="bi bi-patch-check-fill"></i> <p class="ms-2 ">Artista Verificato</p>
+</div>
 <h2>${artist.name}</h2>
-<p class=“${artist.fan} ascoltatori mensili”
+<p class="mt-4 info">${artist.nb_fan} ascoltatori mensili
 </p></div>`;
 
   const containerTop = document.getElementById("topBrani");
