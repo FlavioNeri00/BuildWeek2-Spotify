@@ -93,9 +93,43 @@ section {
   font-size: 0.75rem;
 }
 
+@media (max-width: 992px) {
+  #mix .col:last-child {
+    display: none;
+  }
+  #forYou .col:last-child {
+    display: none;
+  }
+
+  #recents .col:last-child {
+    display: none;
+  }
+}
+
+#searchIcon {
+  top: 10px;
+  left: 20px;
+}
+
+.srcimg {
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  border-radius: 5%;
+}
+
 @media (max-width: 768px) {
   #mix .col:last-child,
   #mix .col:nth-last-of-type(2) {
+    display: none;
+  }
+  #forYou .col:last-child,
+  #forYou .col:nth-last-of-type(2) {
+    display: none;
+  }
+
+  #recents .col:last-child,
+  #recents .col:nth-last-of-type(2) {
     display: none;
   }
 

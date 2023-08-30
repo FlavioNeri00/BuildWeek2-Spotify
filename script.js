@@ -35,14 +35,14 @@ window.onload = async () => {
 
   // SEZIONE ALBUM SALUTI
 
-  albumsArr.forEach(async (element) => {
+  albumsArr.forEach(async element => {
     const resp = await fetch(UrlAlbum + element, options);
     const album = await resp.json();
     console.log(album);
     hpAlbums.innerHTML += ` <div class="col">
     <div class=" d-flex align-items-center bg-secondary">
     <img class="img-size me-2" src="${album.cover_small}" alt="">
-    <p class="text-white fw-bold m-0 fs-6 truncate"><a href="./album.html?ID=${album.id}">${album.title}</a></p>
+    <p class="fw-bold m-0 fs-6 truncate  "><a class="text-decoration-none text-white " href="./album.html?ID=${album.id}">${album.title}</a></p>
   </div>
   </div>`;
   });
@@ -58,13 +58,13 @@ window.onload = async () => {
   fill(recentsArr, recents);
 };
 
-const spotHidden = (e) => {
+const spotHidden = e => {
   const spot = document.getElementById("adv");
   spot.remove();
 };
 
 const fill = (arr, nodo) => {
-  arr.forEach(async (id) => {
+  arr.forEach(async id => {
     const resp = await fetch(UrlAlbum + id, options);
     const album = await resp.json();
     nodo.innerHTML += `
@@ -73,7 +73,7 @@ const fill = (arr, nodo) => {
     <img src="${album.cover_medium}" class="card-img-top" alt="...">
     <div class="card-body d-flex flex-column">
     <p class="text-white fw-bold m-0 fs-6 truncate">${album.title}</p>
-      <a href="" class="mb-auto mt-1 text-decoration-none text-secondary"> ${album.artist.name}</a>
+      <a href="./artist.html?ID=${album.artist.id}" class="mb-auto mt-1 text-decoration-none text-secondary"> ${album.artist.name}</a>
     </div>
   </div>
   </div>`;
