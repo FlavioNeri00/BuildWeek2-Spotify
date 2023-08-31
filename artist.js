@@ -66,11 +66,14 @@ window.onload = async () => {
       audio.src = track.preview;
       const imgPlayer = document.getElementById("imgPlayer");
       const namePlayer = document.getElementById("namePlayer");
+      namePlayer.classList.add("truncate");
       const authorPlayer = document.getElementById("authorPlayer");
+
       imgPlayer.src = track.album.cover_small;
       namePlayer.innerText = track.title;
       authorPlayer.innerText = track.artist.name;
-      audio.play();
+
+      controlPlayer(audio);
     });
   });
 

@@ -53,10 +53,12 @@ const search = async () => {
       const imgPlayer = document.getElementById("imgPlayer");
       const namePlayer = document.getElementById("namePlayer");
       const authorPlayer = document.getElementById("authorPlayer");
+      namePlayer.classList.add("truncate");
       imgPlayer.src = srcArr[i].album.cover_small;
       namePlayer.innerText = srcArr[i].title;
       authorPlayer.innerText = srcArr[i].artist.name;
-      audio.play();
+
+      controlPlayer(audio);
     });
   }
 

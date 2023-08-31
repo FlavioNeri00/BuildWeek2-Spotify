@@ -27,15 +27,15 @@ window.onload = async () => {
 <p class="m-0 text-capitalize">${albumSpot.type}</p>
 <button id="btn-Spot" type="button" class="btn btn-secondary">Nascondi Annuncio</button>
     </div>
-    <h2>${albumSpot.title}</h2>
-    <p>Ascolta il nuovo album di: ${albumSpot.artist.name}</p>
+    <a class="text-decoration-none text-white" href="./album.html?ID=${albumSpot.id}"><h2>${albumSpot.title}</h2></a>
+    <a class="text-decoration-none text-white" href="./artist.html?ID=${albumSpot.artist.id}"><p>Ascolta il nuovo album di: ${albumSpot.artist.name}</p></a>
   </div>`;
   const btnSpot = document.getElementById("btn-Spot");
   btnSpot.onclick = spotHidden;
 
   // SEZIONE ALBUM SALUTI
 
-  albumsArr.forEach(async (element) => {
+  albumsArr.forEach(async element => {
     const resp = await fetch(UrlAlbum + element, options);
     const album = await resp.json();
     console.log(album);
@@ -58,13 +58,13 @@ window.onload = async () => {
   fill(recentsArr, recents);
 };
 
-const spotHidden = (e) => {
+const spotHidden = e => {
   const spot = document.getElementById("adv");
   spot.remove();
 };
 
 const fill = (arr, nodo) => {
-  arr.forEach(async (id) => {
+  arr.forEach(async id => {
     const resp = await fetch(UrlAlbum + id, options);
     const album = await resp.json();
     nodo.innerHTML += `
