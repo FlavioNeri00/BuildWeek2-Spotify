@@ -35,6 +35,7 @@ aside {
     height: 50px;
   }
 }
+
 section {
   height: 88vh;
   overflow: auto;
@@ -50,6 +51,12 @@ section {
     width: 60px;
     height: 60px;
   }
+}
+
+#friendsDiv {
+  height: 88vh;
+  overflow: auto;
+  width: 30%;
 }
 
 .truncate {
@@ -93,12 +100,16 @@ section {
 .img-artist {
   width: 25px;
 }
+.img-friend {
+  width: 50px;
+}
 .info {
   font-size: 0.75rem;
 }
 
 @media (max-width: 992px) {
-  #mix .col:last-child, #searchMainAlbums .col:last-child  {
+  #mix .col:last-child,
+  #searchMainAlbums .col:last-child {
     display: none;
   }
   #forYou .col:last-child {
@@ -143,6 +154,10 @@ section {
 
 .cursor {
   cursor: pointer;
+}
+
+#textPlayer {
+  width: 300px;
 }
 @media (max-width: 768px) {
   #mix .col:last-child,

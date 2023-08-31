@@ -60,11 +60,13 @@ window.onload = async () => {
       const imgPlayer = document.getElementById("imgPlayer");
       const namePlayer = document.getElementById("namePlayer");
       const authorPlayer = document.getElementById("authorPlayer");
+      namePlayer.classList.add("truncate");
       imgPlayer.src = song.album.cover_small;
 
       namePlayer.innerText = song.title;
       authorPlayer.innerText = song.artist.name;
-      audio.play();
+
+      controlPlayer(audio);
     });
   });
 
