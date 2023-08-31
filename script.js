@@ -69,11 +69,11 @@ const fill = (arr, nodo) => {
     const album = await resp.json();
     nodo.innerHTML += `
     <div class="col ">
-    <div class="card bg-black p-2" style="min-height:300px">
-    <img src="${album.cover_medium}" class="card-img-top" alt="...">
+    <div class="card bg-black p-2">
+    <img src="${album.cover_medium}" class=" card-img" alt="...">
     <div class="card-body d-flex flex-column">
     <a href="./album.html?ID=${album.id}" class="text-decoration-none"><p class="text-white fw-bold m-0 fs-6 truncate">${album.title}</p></a>
-      <a href="./artist.html?ID=${album.artist.id}" class="mb-auto mt-1 text-decoration-none text-secondary"> ${album.artist.name}</a>
+      <a href="./artist.html?ID=${album.artist.id}" class="mb-auto mt-1 text-decoration-none text-secondary truncate"> ${album.artist.name}</a>
     </div>
   </div>
   </div>`;
