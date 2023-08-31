@@ -1,11 +1,11 @@
-document.getElementById("btn-fw").addEventListener("click", e => {
+document.getElementById("btn-fw").addEventListener("click", (e) => {
   history.forward();
 });
-document.getElementById("btn-back").addEventListener("click", e => {
+document.getElementById("btn-back").addEventListener("click", (e) => {
   history.back();
 });
 
-const controlPlayer = audio => {
+const controlPlayer = (audio) => {
   const btnplay = document.getElementById("playerBtnPlay");
   const myAudioOnPlaying = () => {
     isPlaying = true;
@@ -24,3 +24,10 @@ const controlPlayer = audio => {
 
   myAudioOnPlaying();
 };
+
+const friendShow = document.getElementById("friends");
+const friendDiv = document.getElementById("friendsDiv");
+const friendsExit = document.getElementById("friendsExit");
+
+friendShow.onclick = () => friendDiv.classList.remove("d-none");
+friendsExit.onclick = () => friendDiv.classList.add("d-none");
