@@ -1,11 +1,11 @@
-document.getElementById("btn-fw").addEventListener("click", (e) => {
+document.getElementById("btn-fw").addEventListener("click", e => {
   history.forward();
 });
-document.getElementById("btn-back").addEventListener("click", (e) => {
+document.getElementById("btn-back").addEventListener("click", e => {
   history.back();
 });
 let ID = null;
-const controlPlayer = (audio) => {
+const controlPlayer = audio => {
   let counter = 0;
   let second = counter / 60;
   const btnplay = document.getElementById("playerBtnPlay");
@@ -14,6 +14,7 @@ const controlPlayer = (audio) => {
   const range = document.getElementById("myRange");
   let volumeRange = document.getElementById("volumeRange");
   range.value = 0;
+  volumeRange.value = 100;
   volumeRange.addEventListener("input", function () {
     volume = volumeRange.value;
     audio.volume = volume / 100;
