@@ -9,6 +9,10 @@ body {
   font-family: "Circular";
 }
 
+#librarybody {
+  overflow: visible;
+}
+
 aside {
   width: 30%;
   height: 100vh;
