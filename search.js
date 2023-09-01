@@ -67,7 +67,7 @@ const search = async () => {
   for (let i = 0; i < 5; i++) {
     mainAlbums.innerHTML += `<div class="col ">
     <div class="card bg-black p-2" style="min-height:300px">
-    <img src="${srcArr[i].album.cover}" class="card-img-top" alt="...">
+    <img src="${srcArr[i].album.cover}" class="card-img" alt="...">
     <div class="card-body d-flex flex-column">
     <a href="./album.html?ID=${srcArr[i].album.id}" class="text-decoration-none">
     <p class="text-white fw-bold m-0 fs-6 truncate">${srcArr[i].album.title}</p></a>
