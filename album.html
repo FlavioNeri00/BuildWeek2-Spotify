@@ -17,7 +17,7 @@
   <body>
     <main class="d-flex bg-black">
       <aside class="mt-3 ms-1 me-2 d-none d-md-block">
-        <div class="bg-dark p-3 mb-1">
+        <div class="my-dark p-3 mb-1">
           <p class="my-0">
             <a class="text-decoration-none fw-bold text-white text-opacity-75" href="./index.html"
               ><i class="bi bi-house-door-fill"></i> Home</a
@@ -29,7 +29,7 @@
             >
           </p>
         </div>
-        <div id="library" class="bg-dark p-3">
+        <div id="library" class="my-dark p-3">
           <div class="d-flex justify-content-between">
             <div>
               <a class="text-decoration-none fw-bold text-white text-opacity-75" href="./library.html"
@@ -179,7 +179,7 @@
           </div>
         </div>
       </aside>
-      <section class="flex-grow-1 mt-3 me-2 bg-dark text-white">
+      <section class="flex-grow-1 mt-3 me-2 grey text-white">
         <div class="mt-2 ms-2 d-flex justify-content-between">
           <div>
             <button id="btn-back" class="btn btn-sm rounded-pill button-move">
@@ -195,15 +195,16 @@
           </div>
         </div>
         <div id="albumHeader" class="d-flex align-items-end ms-2 my-3 text-white"></div>
-        <div id="hpAlbums" class="container-fluid container-md">
+
+        <div id="hpAlbums" class="container-fluid container-md my-dark">
           <div class="d-flex align-items-center">
-            <i class="bi bi-play-circle me-3 fs-3 text-success"></i>
-            <i class="bi bi-heart me-3"></i>
-            <i class="bi bi-arrow-down-circle me-3"></i>
+            <i id="playRandom" class="bi bi-play-circle-fill me-3 text-success"></i>
+            <i class="bi bi-heart ms-3 me-3 albumIcon"></i>
+            <i class="bi bi-arrow-down-circle me-3 albumIcon"></i>
             <i class="bi bi-three-dots"></i>
           </div>
         </div>
-        <div class="container-fluid container-md mb-0">
+        <div class="container-fluid container-md mb-0 my-dark">
           <div class="row">
             <div class="col-8 col-md-6 d-flex">
               <span class="text-secondary">#</span>
@@ -213,12 +214,14 @@
             <div class="col-4 col-md-2 text-end"><i class="bi bi-clock me-5 text-secondary"></i></div>
           </div>
         </div>
-        <hr class="mt-0 border border-secondary border-1 opacity-25" />
-        <div class="container-fluid container-md">
+        <div class="my-dark">
+        <hr class="m-0 mx-2 border border-secondary border-1 opacity-25 my-dark p-0" />
+        <div class="container-fluid container-md my-dark">
           <div id="albumTracks" class="row gy-2"></div>
         </div>
-        <div id="albumFooter" class="mt-5"></div>
+        <div id="albumFooter" class="mt-5 "></div>
       </section>
+    </div>
     </main>
     <div id="player" class="bg-black d-md-flex justify-content-between align-items-center d-sm-none">
       <div id="infoPlayer" class="card-aside d-flex ms-2 align-items-center">

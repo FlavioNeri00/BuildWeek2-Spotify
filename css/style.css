@@ -1,3 +1,36 @@
+.my-dark {
+  background-color: #121212;
+}
+
+.grey {
+  background-color: #232323;
+}
+
+.grey-cards {
+  background-color: rgba(35, 35, 35, 0.3294117647);
+}
+
+.gradient {
+  background: linear-gradient(37deg, black, #121212 76%);
+}
+
+.artist {
+  background-color: #282828;
+}
+
+#playRandom {
+  font-size: 3rem;
+}
+
+.albumIcon {
+  font-size: 2rem;
+}
+
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: green;
+}
+
 *,
 *::before,
 *::after {

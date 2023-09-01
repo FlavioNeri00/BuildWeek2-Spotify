@@ -19,16 +19,16 @@ window.onload = async () => {
   const tracks = document.getElementById("albumTracks");
   const foot = document.getElementById("albumFooter");
 
-  container.innerHTML = `<img  class="me-4 album-img" src="${album.cover_medium}" alt="">
+  container.innerHTML = `<img  class="me-4 album-img shadow" src="${album.cover_medium}" alt="">
   <div class="flex-grow-1 ">
     <div class="d-flex justify-content-between align-items-center">
-<p class="m-0 text-capitalize ">${album.type}</p>
+<p class="m-0 text-capitalize fw-bold">${album.type}</p>
 
     </div>
     <h1 class="titleAlbum ">${album.title}</h1>
     <div class="d-flex align-items-center mt-5">
-    <img class="rounded-circle img-artist" src="${album.artist.picture_small}"/>
-    <p class="m-0 info truncate"><a class="text-decoration-none text-white mx-1 fw-bold " href="./artist.html?ID=${
+    <img class="rounded-circle img-artist shadow" src="${album.artist.picture_small}"/>
+    <p class="m-0 info truncate"><a class="text-decoration-none text-white mx-1" href="./artist.html?ID=${
       album.artist.id
     }">${album.artist.name}</a>
     • ${album.release_date.split("-")[0]} • ${album.nb_tracks} brani,

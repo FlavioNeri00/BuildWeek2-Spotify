@@ -23,9 +23,9 @@ window.onload = async () => {
   const albumSpot = await respSpot.json();
   spot.innerHTML = `<img  class="me-4" src="${albumSpot.cover_medium}" alt="">
   <div class="flex-grow-1 ">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center rounded-1">
 <p class="m-0 text-capitalize">${albumSpot.type}</p>
-<button id="btn-Spot" type="button" class="btn btn-secondary">Nascondi Annuncio</button>
+<button id="btn-Spot" type="button" class="btn grey text-secondary fw-bold px-2 rounded-pill ">NASCONDI ANNUNCIO</button>
     </div>
     <a class="text-decoration-none text-white" href="./album.html?ID=${albumSpot.id}"><h2>${albumSpot.title}</h2></a>
     <a class="text-decoration-none text-white" href="./artist.html?ID=${albumSpot.artist.id}"><p>Ascolta il nuovo album di: ${albumSpot.artist.name}</p></a>
@@ -35,13 +35,13 @@ window.onload = async () => {
 
   // SEZIONE ALBUM SALUTI
 
-  albumsArr.forEach(async element => {
+  albumsArr.forEach(async (element) => {
     const resp = await fetch(UrlAlbum + element, options);
     const album = await resp.json();
     console.log(album);
     hpAlbums.innerHTML += ` <div class="col">
-    <div class=" d-flex align-items-center bg-secondary">
-    <img class="img-size me-2" src="${album.cover_small}" alt="">
+    <div class=" d-flex align-items-center grey rounded-1 shadow">
+    <img class="img-size me-2 shadow rounded-start-2" src="${album.cover_small}" alt="">
     <p class="fw-bold m-0 fs-6 truncate  "><a class="text-decoration-none text-white " href="./album.html?ID=${album.id}">${album.title}</a></p>
   </div>
   </div>`;
@@ -58,19 +58,19 @@ window.onload = async () => {
   fill(recentsArr, recents);
 };
 
-const spotHidden = e => {
+const spotHidden = (e) => {
   const spot = document.getElementById("adv");
   spot.remove();
 };
 
 const fill = (arr, nodo) => {
-  arr.forEach(async id => {
+  arr.forEach(async (id) => {
     const resp = await fetch(UrlAlbum + id, options);
     const album = await resp.json();
     nodo.innerHTML += `
     <div class="col ">
-    <div class="card bg-black p-2">
-    <img src="${album.cover_medium}" class=" card-img" alt="...">
+    <div class="card grey-cards p-3">
+    <img src="${album.cover_medium}" class=" card-img shadow" alt="...">
     <div class="card-body d-flex flex-column">
     <a href="./album.html?ID=${album.id}" class="text-decoration-none"><p class="text-white fw-bold m-0 fs-6 truncate">${album.title}</p></a>
       <a href="./artist.html?ID=${album.artist.id}" class="mb-auto mt-1 text-decoration-none text-secondary truncate"> ${album.artist.name}</a>

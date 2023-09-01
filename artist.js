@@ -42,7 +42,7 @@ window.onload = async () => {
     trackDiv.innerHTML = `
     <button id="play-${index}" class="btnPlay"> ${index + 1}</button>
     <img
-      class="ms-3"
+      class="ms-3 shadow"
       src="${track.album.cover_small}"
       alt=""
       style="width: 40px; height: 40px"
@@ -80,7 +80,7 @@ window.onload = async () => {
   const likeIt = document.getElementById("love");
   const nblike = Math.floor(Math.random() * artist.nb_album);
   likeIt.innerHTML = ` <img
-  class="me-3"
+  class="me-3 shadow"
   src="${artist.picture_small}"
   alt=""
   style="width: 50px; height: 50px; border-radius: 50%"
