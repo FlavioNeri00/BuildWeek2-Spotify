@@ -13,6 +13,10 @@ body {
   font-style: normal;
 }
 
+#librarybody {
+  overflow: visible;
+}
+
 aside {
   width: 30%;
   height: 100vh;
