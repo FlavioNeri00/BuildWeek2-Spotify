@@ -11,6 +11,14 @@ const controlPlayer = (audio) => {
   const btnplay = document.getElementById("playerBtnPlay");
   const btnRandom = document.getElementById("playRandom");
   const span = document.getElementById("seconds");
+  const range = document.getElementById("myRange");
+  let volumeRange = document.getElementById("volumeRange");
+  range.value = 0;
+  volumeRange.addEventListener("input", function () {
+    volume = volumeRange.value;
+    audio.volume = volume / 100;
+  });
+
   const myAudioOnPlaying = () => {
     clearInterval(ID);
     isPlaying = true;
@@ -20,6 +28,7 @@ const controlPlayer = (audio) => {
       btnRandom.innerHTML = `<i class="bi bi-pause-circle-fill m-3 fs-1"></i>`;
     }
     ID = setInterval(() => {
+      range.value = (second * 100) / 30;
       if (second < 10) {
         second = "0" + second;
         console.log(second);

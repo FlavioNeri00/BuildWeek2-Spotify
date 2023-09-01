@@ -50,6 +50,12 @@ section .img-size {
   height: 60px;
 }
 
+section ::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Colore del cursore */
+  border: 2px solid #0056b3; /* Bordo attorno al cursore */
+  border-radius: 6px; /* Angoli arrotondati del cursore */
+}
+
 #friendsDiv {
   height: 88vh;
   overflow: auto;
