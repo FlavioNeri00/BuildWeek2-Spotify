@@ -312,7 +312,7 @@
         </div>
       </div>
     </main>
-    <div id="player" class="bg-black d-md-flex justify-content-between align-items-center d-sm-none">
+    <div id="player" class="bg-black d-flex justify-content-between align-items-center">
       <div id="infoPlayer" class="card-aside d-flex ms-2 align-items-center">
         <img
           id="imgPlayer"
@@ -321,30 +321,28 @@
           alt=""
         />
         <div id="textPlayer">
-          <p id="namePlayer" class="text-white m-0">Brani che ti piacciono</p>
-          <span id="authorPlayer" class="text-secondary">Playlist • 24509</span>
+          <p id="namePlayer" class="text-white m-0 truncate">Brani che ti piacciono</p>
+          <span id="authorPlayer" class="text-secondary truncate">Playlist • 24509</span>
         </div>
         <i class="bi bi-heart ms-2 text-white"></i>
       </div>
       <div class="d-flex flex-column">
         <div class="d-flex align-items-center m-auto">
-          <i class="bi bi-shuffle text-white m-1"></i>
-
-          <i class="bi bi-skip-start-fill text-white m-1 cursor"></i>
-
+          <i class="bi bi-shuffle text-white m-1 d-none d-md-flex"></i>
+          <i class="bi bi-skip-start-fill text-white m-1 d-none d-md-flex"></i>
           <a id="playerBtnPlay" class="text-decoration-none text-white cursor">
-            <i class="bi bi-play-circle-fill fs-3 text-white m-1"></i
+            <i class="bi bi-play-circle-fill fs-3 text-white mx-5"></i
           ></a>
-          <i class="bi bi-skip-end-fill text-white m-1"></i>
-          <i class="bi bi-repeat text-white m-1"></i>
+          <i class="bi bi-skip-end-fill text-white m-1 d-none d-md-flex"></i>
+          <i class="bi bi-repeat text-white m-1 d-none d-md-flex"></i>
         </div>
-        <div class="slidecontainer d-flex align-items-center">
+        <div class="slidecontainer d-flex align-items-center d-none d-md-flex">
           <p class="text-white m-0">0:<span id="seconds" class="text-white">00</span></p>
           <input type="range" min="1" max="100" value="0" class="slider mx-2" id="myRange" style="width: 450px" />
           <span class="text-white">0:30</span>
         </div>
       </div>
-      <div>
+      <div class="d-none d-md-flex">
         <i class="bi bi-mic text-white"></i>
         <i class="bi bi-music-note-list text-white"></i>
         <i class="bi bi-speaker text-white"></i>

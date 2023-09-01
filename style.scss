@@ -128,7 +128,7 @@ section ::-webkit-scrollbar-thumb {
 }
 
 .titleAlbum {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .img-artist {
@@ -155,6 +155,9 @@ section ::-webkit-scrollbar-thumb {
   }
   #friendsDiv {
     display: none;
+  }
+  .titleAlbum {
+    font-size: 3rem;
   }
 }
 
@@ -194,7 +197,7 @@ section ::-webkit-scrollbar-thumb {
 }
 
 #textPlayer {
-  width: 300px;
+  max-width: 300px;
 }
 
 @media (max-width: 768px) {
@@ -219,6 +222,14 @@ section ::-webkit-scrollbar-thumb {
   }
   .titleAlbum {
     font-size: 3rem;
+  }
+  #player {
+    height: 70px;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 70px;
+    left: 0;
   }
 }
 

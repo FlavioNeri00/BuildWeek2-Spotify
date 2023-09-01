@@ -163,22 +163,22 @@
           </div>
         </div>
         <div id="adv" class="d-none d-md-flex mt-3 text-white m-5 py-4 px-3 gradient"></div>
-        <div id="hpAlbums" class="container">
+        <div id="hpAlbums" class="container-fluid container-md">
           <div class="d-flex align-items-center">
             <h2 class="text-white me-2">Benvenuto su Spotify</h2>
             <img id="logo" src="./assets/BW2-Spotify-assets/assets/imgs/Spotify_icon.svg.png" alt="" />
           </div>
           <div id="innerHpAlbums" class="row row-cols-2 row-cols-md-3 gx-3 gy-2 mt-2"></div>
         </div>
-        <div class="container">
+        <div class="container-fluid container-md">
           <h4 class="mt-3 ms-2">I tuoi Album</h4>
           <div id="mix" class="row mt-3 ms-2"></div>
         </div>
-        <div class="container">
+        <div class="container-fluid container-md">
           <h4 class="mt-3 ms-2">Scelti per te</h4>
           <div id="forYou" class="row mt-3 ms-2"></div>
         </div>
-        <div class="container">
+        <div class="container-fluid container-md">
           <h4 class="mt-3 ms-2">Ascoltati di recente</h4>
           <div id="recents" class="row mt-3 mb-3 ms-2"></div>
         </div>
@@ -297,42 +297,43 @@
         </div>
       </div>
     </main>
-    <div id="player" class="bg-black d-md-flex justify-content-between align-items-center d-sm-none">
-      <div class="card-aside d-flex ms-2 align-items-center">
+    <div id="player" class="bg-black d-flex justify-content-between align-items-center">
+      <div id="infoPlayer" class="card-aside d-flex ms-2 align-items-center">
         <img
+          id="imgPlayer"
           class="me-2"
           src="./assets/BW2-Spotify-assets/assets/imgs/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"
           alt=""
         />
-        <div>
-          <p class="text-white m-0">Brani che ti piacciono</p>
-          <span class="text-secondary">Playlist • 24509</span>
+        <div id="textPlayer">
+          <p id="namePlayer" class="text-white m-0 truncate">Brani che ti piacciono</p>
+          <span id="authorPlayer" class="text-secondary truncate">Playlist • 24509</span>
         </div>
         <i class="bi bi-heart ms-2 text-white"></i>
       </div>
       <div class="d-flex flex-column">
         <div class="d-flex align-items-center m-auto">
-          <i class="bi bi-shuffle text-white m-1"></i>
-          <i class="bi bi-skip-start-fill text-white m-1"></i>
+          <i class="bi bi-shuffle text-white m-1 d-none d-md-flex"></i>
+          <i class="bi bi-skip-start-fill text-white m-1 d-none d-md-flex"></i>
           <a id="playerBtnPlay" class="text-decoration-none text-white cursor">
-            <i class="bi bi-play-circle-fill fs-3 text-white m-1"></i
+            <i class="bi bi-play-circle-fill fs-3 text-white mx-5"></i
           ></a>
-          <i class="bi bi-skip-end-fill text-white m-1"></i>
-          <i class="bi bi-repeat text-white m-1"></i>
+          <i class="bi bi-skip-end-fill text-white m-1 d-none d-md-flex"></i>
+          <i class="bi bi-repeat text-white m-1 d-none d-md-flex"></i>
         </div>
-        <div class="slidecontainer d-flex align-items-center">
+        <div class="slidecontainer d-flex align-items-center d-none d-md-flex">
           <p class="text-white m-0">0:<span id="seconds" class="text-white">00</span></p>
           <input type="range" min="1" max="100" value="0" class="slider mx-2" id="myRange" style="width: 450px" />
           <span class="text-white">0:30</span>
         </div>
       </div>
-      <div>
+      <div class="d-none d-md-flex">
         <i class="bi bi-mic text-white"></i>
         <i class="bi bi-music-note-list text-white"></i>
         <i class="bi bi-speaker text-white"></i>
         <i class="bi bi-volume-up text-white"></i>
 
-        <input type="range" min="1" max="100" value="0" class="slider" id="VolumeRange" style="width: 30%" />
+        <input type="range" min="1" max="100" value="0" class="slider" id="volumeRange" style="width: 30%" />
       </div>
     </div>
     <div id="small-menu" class="bg-black d-flex justify-content-around align-items-center d-md-none">

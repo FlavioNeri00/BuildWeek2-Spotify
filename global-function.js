@@ -1,11 +1,11 @@
-document.getElementById("btn-fw").addEventListener("click", e => {
+document.getElementById("btn-fw").addEventListener("click", (e) => {
   history.forward();
 });
-document.getElementById("btn-back").addEventListener("click", e => {
+document.getElementById("btn-back").addEventListener("click", (e) => {
   history.back();
 });
 let ID = null;
-const controlPlayer = audio => {
+const controlPlayer = (audio) => {
   let counter = 0;
   let second = counter / 60;
   const btnplay = document.getElementById("playerBtnPlay");
@@ -24,7 +24,7 @@ const controlPlayer = audio => {
     clearInterval(ID);
     isPlaying = true;
     audio.play();
-    btnplay.innerHTML = `<i class="bi bi-pause-circle-fill fs-3 text-white m-1"></i>`;
+    btnplay.innerHTML = `<i class="bi bi-pause-circle-fill fs-3 text-white mx-5"></i>`;
     if (btnRandom) {
       btnRandom.innerHTML = `<i class="bi bi-pause-circle-fill m-3 fs-1"></i>`;
     }
@@ -48,7 +48,8 @@ const controlPlayer = audio => {
     isPlaying = false;
     audio.pause();
     clearInterval(ID);
-    btnplay.innerHTML = `<i class="bi bi-play-circle-fill fs-3 text-white m-1"></i>`;
+    btnplay.innerHTML = `  <i class="bi bi-play-circle-fill fs-3 text-white mx-5"></i
+    >`;
     if (btnRandom) {
       btnRandom.innerHTML = ` <i class="bi bi-play-circle-fill m-3 fs-1"></i>`;
     }
