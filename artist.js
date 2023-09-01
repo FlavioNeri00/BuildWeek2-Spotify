@@ -31,8 +31,25 @@ window.onload = async () => {
 
   const resp2 = await fetch(URL + idArtist + query, options);
   const topTracks = await resp2.json();
-  const trackArr = topTracks.data;
+  const trackArr = [...topTracks.data];
+
   const audio = new Audio();
+  const playRandom = document.getElementById("playRandom");
+  const songRandom = Math.floor(Math.random() * trackArr.length);
+
+  playRandom.onclick = () => {
+    audio.src = trackArr[songRandom].preview;
+    const imgPlayer = document.getElementById("imgPlayer");
+    const namePlayer = document.getElementById("namePlayer");
+    namePlayer.classList.add("truncate");
+    const authorPlayer = document.getElementById("authorPlayer");
+
+    imgPlayer.src = trackArr[songRandom].album.cover_small;
+    namePlayer.innerText = trackArr[songRandom].title;
+    authorPlayer.innerText = trackArr[songRandom].artist.name;
+
+    controlPlayer(audio);
+  };
 
   trackArr.forEach((track, index) => {
     const minTrack = (track.duration / 60).toFixed(2).split(".").join(":");
