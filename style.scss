@@ -21,10 +21,6 @@ aside {
   }
   #library {
     #scroll-library {
-      &::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        outline: 1px solid slategrey;
-      }
       height: 64vh;
       overflow: auto;
     }
@@ -160,6 +156,7 @@ section {
 #textPlayer {
   width: 300px;
 }
+
 @media (max-width: 768px) {
   #mix .col:last-child,
   #mix .col:nth-last-of-type(2),

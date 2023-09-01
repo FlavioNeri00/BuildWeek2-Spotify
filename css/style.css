@@ -24,10 +24,6 @@ aside #library #scroll-library {
   height: 64vh;
   overflow: auto;
 }
-aside #library #scroll-library::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
 
 .card-aside img {
   width: 50px;
