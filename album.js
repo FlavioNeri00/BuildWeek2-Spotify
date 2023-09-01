@@ -36,8 +36,25 @@ window.onload = async () => {
     </div>
   </div>`;
 
-  const songs = album.tracks.data;
+  const songs = [...album.tracks.data];
   const audio = new Audio();
+  const playRandom = document.getElementById("playRandom");
+  const songRandom = Math.floor(Math.random() * songs.length);
+  playRandom.onclick = () => {
+    audio.src = songs[songRandom].preview;
+
+    const imgPlayer = document.getElementById("imgPlayer");
+    const namePlayer = document.getElementById("namePlayer");
+    const authorPlayer = document.getElementById("authorPlayer");
+    namePlayer.classList.add("truncate");
+    imgPlayer.src = songs[songRandom].album.cover_small;
+
+    namePlayer.innerText = songs[songRandom].title;
+    authorPlayer.innerText = songs[songRandom].artist.name;
+
+    controlPlayer(audio);
+  };
+
   songs.forEach((song, index) => {
     const minSong = (song.duration / 60).toFixed(2).split(".").join(":");
     const trackDiv = document.createElement("div");
