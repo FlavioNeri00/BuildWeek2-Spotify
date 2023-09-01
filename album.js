@@ -25,7 +25,7 @@ window.onload = async () => {
 <p class="m-0 text-capitalize fw-bold">${album.type}</p>
 
     </div>
-    <h1 class="titleAlbum ">${album.title}</h1>
+    <h1 class="titleAlbum truncate2">${album.title}</h1>
     <div class="d-flex align-items-center mt-5">
     <img class="rounded-circle img-artist shadow" src="${album.artist.picture_small}"/>
     <p class="m-0 info truncate"><a class="text-decoration-none text-white mx-1" href="./artist.html?ID=${

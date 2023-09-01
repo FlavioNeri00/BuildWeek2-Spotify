@@ -101,6 +101,14 @@ section ::-webkit-scrollbar-thumb {
   text-overflow: ellipsis;
 }
 
+.truncate2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #player {
   height: 70px;
   overflow: hidden;
@@ -141,7 +149,7 @@ section ::-webkit-scrollbar-thumb {
   font-size: 0.75rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   #mix .col:last-child,
   #searchMainAlbums .col:last-child {
     display: none;
@@ -153,6 +161,25 @@ section ::-webkit-scrollbar-thumb {
   #recents .col:last-child {
     display: none;
   }
+}
+
+@media (max-width: 992px) {
+  #mix .col:last-child,
+  #mix .col:nth-last-of-type(2),
+  #searchMainAlbums .col:last-child,
+  #searchMainAlbums .col:nth-last-of-type(2) {
+    display: none;
+  }
+  #forYou .col:last-child,
+  #forYou .col:nth-last-of-type(2) {
+    display: none;
+  }
+
+  #recents .col:last-child,
+  #recents .col:nth-last-of-type(2) {
+    display: none;
+  }
+
   #friendsDiv {
     display: none;
   }
@@ -160,7 +187,6 @@ section ::-webkit-scrollbar-thumb {
     font-size: 3rem;
   }
 }
-
 #searchIcon {
   top: 10px;
   left: 20px;
@@ -201,22 +227,6 @@ section ::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
-  #mix .col:last-child,
-  #mix .col:nth-last-of-type(2),
-  #searchMainAlbums .col:last-child,
-  #searchMainAlbums .col:nth-last-of-type(2) {
-    display: none;
-  }
-  #forYou .col:last-child,
-  #forYou .col:nth-last-of-type(2) {
-    display: none;
-  }
-
-  #recents .col:last-child,
-  #recents .col:nth-last-of-type(2) {
-    display: none;
-  }
-
   .album-img {
     width: 200px;
   }
