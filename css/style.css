@@ -153,6 +153,9 @@ section ::-webkit-scrollbar-thumb {
   #recents .col:last-child {
     display: none;
   }
+  #friendsDiv {
+    display: none;
+  }
 }
 #searchIcon {
   top: 10px;
