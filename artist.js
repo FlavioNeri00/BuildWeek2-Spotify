@@ -11,6 +11,14 @@ const options = {
   },
 };
 
+const followingBtn = document.getElementById("following-button");
+followingBtn.onclick = () => {
+  if (followingBtn.innerText === "SEGUI") {
+    followingBtn.innerText = "FOLLOWING";
+  } else {
+    followingBtn.innerText = "SEGUI";
+  }
+};
 window.onload = async () => {
   const resp = await fetch(URL + idArtist, options);
   const artist = await resp.json();
