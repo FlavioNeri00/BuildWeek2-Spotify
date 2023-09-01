@@ -10,7 +10,13 @@
 }
 
 .gradient {
-  background: linear-gradient(37deg, black, #121212 76%);
+  background: linear-gradient(57deg, #121212, transparent 76%);
+}
+
+.gradient2{
+  background: linear-gradient(183deg, #1A2F3B, #121212 100%);
+    padding-top: 1px;
+    padding-bottom: 1rem;
 }
 
 .artist {

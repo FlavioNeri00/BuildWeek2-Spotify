@@ -146,23 +146,27 @@
         </div>
       </aside>
       <section class="flex-grow-1 mt-3 me-2 my-dark text-white rounded-1">
-        <div class="mt-2 ms-2 d-flex justify-content-between">
-          <div>
-            <button id="btn-back" class="btn btn-sm rounded-pill button-move">
-              <i class="bi bi-chevron-left text-white"></i>
-            </button>
-            <button id="btn-fw" class="btn btn-sm rounded-pill button-move">
-              <i class="bi bi-chevron-right text-white"></i>
-            </button>
+        <div class="gradient2">
+          <div class="mt-2 ms-2 d-flex justify-content-between">
+            <div>
+              <button id="btn-back" class="btn btn-sm rounded-pill button-move">
+                <i class="bi bi-chevron-left text-white"></i>
+              </button>
+              <button id="btn-fw" class="btn btn-sm rounded-pill button-move">
+                <i class="bi bi-chevron-right text-white"></i>
+              </button>
+            </div>
+
+            <div>
+              <a id="friends" class="text-decoration-none text-white cursor"
+                ><i class="bi bi-people-fill fs-4 me-1"></i
+              ></a>
+              <i class="bi bi-person-circle text-white fs-4 me-4"></i>
+            </div>
           </div>
-          <div>
-            <a id="friends" class="text-decoration-none text-white cursor"
-              ><i class="bi bi-people-fill fs-4 me-1"></i
-            ></a>
-            <i class="bi bi-person-circle text-white fs-4 me-4"></i>
-          </div>
+
+          <div id="adv" class="d-none d-md-flex mt-3 text-white m-5 py-4 px-3 gradient"></div>
         </div>
-        <div id="adv" class="d-none d-md-flex mt-3 text-white m-5 py-4 px-3 gradient"></div>
         <div id="hpAlbums" class="container-fluid container-md">
           <div class="d-flex align-items-center">
             <h2 class="text-white me-2">Benvenuto su Spotify</h2>
@@ -183,7 +187,7 @@
           <div id="recents" class="row mt-3 mb-3 ms-2"></div>
         </div>
       </section>
-      <div id="friendsDiv" class="my-dark mt-3 d-none">
+      <div id="friendsDiv" class="my-dark mt-3 d-none rounded-1">
         <div class="d-flex justify-content-between align-items-center mx-2 mt-3">
           <h6 class="fw-bold text-white m-0">Attività amici</h6>
           <div class="d-flex">
